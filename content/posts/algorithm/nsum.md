@@ -16,7 +16,7 @@ Output: index1=1, index2=2
 
 [**Two sum LeetCode题目地址**](https://oj.leetcode.com/problems/two-sum/)
 
-此题最直接的思路便是利用两个索引index1, index2, index1从数组开始扫描，index2从index1下一个扫描，判断两个索引上的数字和是否为给定的数值，这种方法时间复杂度为\\(O(n^2)\\),空间复杂度为\\(O(1)\\),这么容易想到当然不是最优解，下面介绍两种复杂度比较低的方法。
+此题最直接的思路便是利用两个索引index1, index2, index1从数组开始扫描，index2从index1下一个扫描，判断两个索引上的数字和是否为给定的数值，这种方法时间复杂度为$O(n^2)$,空间复杂度为$O(1)$,这么容易想到当然不是最优解，下面介绍两种复杂度比较低的方法。
 
 
 如果数组是有序数组，那么问题就被大大简化了，选择两个指针index1, index2分别指向数组第一个元素和最后一个元素，判断两个元素的和与给定数值val的大小关系，如果A[index1] + A[index] 等于 val那么找到两个下标返回即可；如果A[index1] + A[index2] < val，说明两个数的和还不够大，把左指针右移；否则两个数和太大，把右指针左移，直到两个指针交错。代码如下：
@@ -49,7 +49,7 @@ class TwoSum {
     }
 }
 ```
-但题目描述中并没有说数组有序，上述算法可以用来判断一个数组中是否有两个数的和等于某个特定值，首先进行排序而后查找，排序可以采用快排、归并排序、堆排序等，平均时间复杂度为\\(O(nlogn)\\)，查找的时间复杂度是\\(O(n)\\)，所以说算法整体复杂度是\\(O(nlogn)\\)。
+但题目描述中并没有说数组有序，上述算法可以用来判断一个数组中是否有两个数的和等于某个特定值，首先进行排序而后查找，排序可以采用快排、归并排序、堆排序等，平均时间复杂度为$O(nlogn)$，查找的时间复杂度是$O(n)$，所以说算法整体复杂度是$O(nlogn)$。
 
 
 下面介绍一种利用空间换时间的方法，对数组A进行线性扫描，索引为index，目标值为target，只需要判断target - A[index]是否在数组中即可，对于判断某个数是否存在可以用哈希结构来降低时间复杂度，具体代码如下：
@@ -73,7 +73,7 @@ public int[] twoSum2(int[] numbers, int target)
         return result;
     }
 ```
-这种方法时间复杂度为\\(O(n)\\), 空间复杂度为\\(O(n)\\)。
+这种方法时间复杂度为$O(n)$, 空间复杂度为$O(n)$。
 ###Three sum
 >Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 
@@ -137,7 +137,7 @@ public List<List<Integer>> threeSum(int[] num) {
         return result;
     }
 ```
-该算法的时间复杂度为\\(O(n^2)\\), 空间复杂度为\\(O(1)\\)。
+该算法的时间复杂度为$O(n^2)$, 空间复杂度为$O(1)$。
 
 ###Four sum
 >Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
@@ -208,4 +208,4 @@ Four sum的思路和Three sum一致，先选定某个数，就可以把问题转
 ```
 
 ###总结
-总的来说nsum问题有点类似于递归算法，要想解决nsum，转而去解决(n-1)sum，(n-2)sum，...，2sum。只不过针对具体的题目要求要对数据进行排序、去重等操作。推广开来nsum问题可以在\\(O({m}^{n-1})\\)时间复杂度内完成，m为数组长度。
+总的来说nsum问题有点类似于递归算法，要想解决nsum，转而去解决(n-1)sum，(n-2)sum，...，2sum。只不过针对具体的题目要求要对数据进行排序、去重等操作。推广开来nsum问题可以在$O({m}^{n-1})$时间复杂度内完成，m为数组长度。
