@@ -54,7 +54,7 @@ class TwoSum {
 
 下面介绍一种利用空间换时间的方法，对数组A进行线性扫描，索引为index，目标值为target，只需要判断target - A[index]是否在数组中即可，对于判断某个数是否存在可以用哈希结构来降低时间复杂度，具体代码如下：
 ```java
-public int[] twoSum2(int[] numbers, int target)
+    public int[] twoSum2(int[] numbers, int target)
     {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int[] result = {-1, -1};
@@ -99,7 +99,7 @@ public int[] twoSum2(int[] numbers, int target)
 
 这道题要求返回的是三个数的升序组合，不要求下标所以可以利用上一题的两种方法，要求元组(a, b, c)使得a + b + c = 0，对任意一个元素A[i],只要判断数组中是否存在A[j] + A[k] = target - A[i]，这样便可以转换成 **Two sum**问题了。由于题目要求返回的集合无重复且元组顺序非递减，可以先对数组进行排序，而后转换成 **Two sum** 问题。代码如下：
 ```java
-public List<List<Integer>> threeSum(int[] num) {
+    public List<List<Integer>> threeSum(int[] num) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(num);
         int n = num.length;
