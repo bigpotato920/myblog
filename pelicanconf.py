@@ -24,8 +24,8 @@ THEME = '../pelican-bootstrap3'
 LOAD_CONTENT_CACHE = False
 
 #plugins
-PLUGIN_PATHS = ["/Library/Python/2.7/site-packages/pelican_plugins"]
-PLUGINS = ['better_codeblock_line_numbering']
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud']
 
 MD_EXTENSIONS = [
     'codehilite(css_class=highlight,linenums=False)',
