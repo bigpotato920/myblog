@@ -25,8 +25,10 @@ LOAD_CONTENT_CACHE = False
 
 #plugins
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud']
-
+PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud', 'summary']
+TAG_CLOUD_STEPS = 4
+TAG_CLOUD_MAX_ITEMS = 100
+TAG_CLOUD_SORTING = 'random'
 MD_EXTENSIONS = [
     'codehilite(css_class=highlight,linenums=False)',
     'extra'
