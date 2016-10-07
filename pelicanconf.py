@@ -57,7 +57,7 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_MENU = False
 DEFAULT_PAGINATION = 10
 #Disqus comments
-SITEURL = u"http://bigpotato920.github.io"
+SITEURL = u"https://bigpotato920.github.io"
 DISQUS_SITENAME = u"bigpotato4future"
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
