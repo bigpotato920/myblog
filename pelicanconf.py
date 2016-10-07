@@ -20,18 +20,19 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #pelican theme path
-THEME = '../pelican-bootstrap3'
+THEME = './themes/pelican-elegant'
 LOAD_CONTENT_CACHE = False
 
 #plugins
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud', 'summary']
+PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud', 'summary', 'extract_toc']
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 100
 TAG_CLOUD_SORTING = 'random'
 MD_EXTENSIONS = [
     'codehilite(css_class=highlight,linenums=False)',
-    'extra'
+    'extra',
+    'toc'
     ]
 
 # Blogroll
