@@ -25,7 +25,7 @@ LOAD_CONTENT_CACHE = False
 
 #plugins
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud', 'summary', 'extract_toc']
+PLUGINS = ['better_codeblock_line_numbering', 'tag_cloud', 'summary', 'extract_toc', 'sitemap']
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 100
 TAG_CLOUD_SORTING = 'random'
@@ -62,3 +62,16 @@ SITEURL = u"http://bigpotato920.github.io"
 DUOSHUO_SITENAME = u"bigpotato920"
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+            'articles': 0.5,
+            'indexes': 0.5,
+            'pages': 0.5
+        },
+    'changefreqs': {
+            'articles': 'monthly',
+            'indexes': 'daily',
+            'pages': 'monthly'
+        }
+}
