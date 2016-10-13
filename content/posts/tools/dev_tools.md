@@ -2,7 +2,7 @@ Title: 开发环境总结
 Date: 2016-10-7
 Modified: 2016-10-7
 Category: tools
-Tags: 开发环境, 编辑器, 硬件
+Tags: 开发环境, 编辑器, MAC, 硬件
 Slug:dev_tool
 Summary:总结目前的开发环境，硬件设备、常用软件
 Author:bigpotato
